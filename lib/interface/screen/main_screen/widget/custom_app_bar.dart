@@ -21,27 +21,35 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: primaryColor.withOpacity(.3),
-      height: 40,
+      decoration: BoxDecoration(
+        color: primaryColor.withOpacity(.3),
+        boxShadow: [
+          BoxShadow(
+              blurRadius: 15, color: Colors.black38, blurStyle: BlurStyle.outer)
+        ],
+        borderRadius: BorderRadius.vertical(bottom: Radius.elliptical(15, 10)),
+      ),
+      height: 45,
       child: Stack(
         children: [
           ClipRRect(
+            borderRadius:
+                const BorderRadius.vertical(bottom: Radius.elliptical(15, 10)),
             child: BackdropFilter(
                 filter: ImageFilter.blur(
-                  sigmaX: 2,
-                  sigmaY: 2,
+                  sigmaX: 15,
+                  sigmaY: 15,
                 ),
                 child: Center(
                   child: Padding(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: defaultPadding / 8),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: defaultPadding / 8),
                     child: Row(
                       textBaseline: TextBaseline.ideographic,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         CustomIconButton(
-                          size: 30,
                           icon: const Icon(
                             Icons.chevron_left,
                             size: 20,
@@ -60,7 +68,6 @@ class CustomAppBar extends StatelessWidget {
                                   fontWeight: FontWeight.bold),
                         ),
                         CustomIconButton(
-                          size: 30,
                           icon: const Icon(
                             BootstrapIcons.house,
                             size: 20,

@@ -33,7 +33,7 @@ class MainScreen extends StatelessWidget {
                 alignment: Alignment.topCenter,
                 child: appBar ??
                     CustomAppBar(
-                      title: "$title",
+                      title: title ?? "",
                     ),
               )
           ]),

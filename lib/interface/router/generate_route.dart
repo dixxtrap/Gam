@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:grica/interface/screen/main_screen/main_screen.dart';
+import 'package:grica/core/model/disaster_model.dart';
+import 'package:grica/interface/screen/grica/grica_screen.dart';
+import 'package:grica/interface/screen/grica_recap/grica_recap.dart';
+import 'package:grica/interface/screen/splash/loading.dart';
 
 myPageBuilder(Widget page, Curve curve) => PageRouteBuilder(
     transitionDuration: const Duration(milliseconds: 600),
@@ -20,33 +23,30 @@ myPageBuilder(Widget page, Curve curve) => PageRouteBuilder(
 class GeneratedRoutes {
   static const String home = "/";
   static const String splash = "/spash";
-  static const String plateformes = "/plateformes";
-  static const String preload = "/preload";
+  static const String grica = "/grica";
+  static const String recap = "/recap";
 
   static Route<dynamic> onGeneratedRoute(RouteSettings settings) {
     // ignore: unused_local_variable
     final Object? args = settings.arguments;
     switch (settings.name) {
-      // case plateformes:
-      //   if (args is Map<String, dynamic>) {
-      //     return myPageBuilder(
-      //         PlateformsScreen(
-      //           list: args["options"],
-      //           listAge: args["listAge"],
-      //           listGenre: args["listGenre"],
-      //         ),
-      //         Curves.linearToEaseOut);
-      //   } else {
-      //     return MaterialPageRoute(builder: (context) => const Home());
-      //   }
+      case recap:
+        if (args is DisasterModel) {
+          return myPageBuilder(
+              RecapScreen(
+                disaster: args,
+              ),
+              Curves.linearToEaseOut);
+        } else {
+          return MaterialPageRoute(builder: (context) => const GricaScreen());
+        }
 
-      case home:
-        return myPageBuilder(MainScreen(child: Container()), Curves.easeInOut);
-      // case splash:
-      //   return myPageBuilder(const Splash(), Curves.easeInOut);
+      case grica:
+        return myPageBuilder(GricaScreen(), Curves.easeInOut);
+      case splash:
+        return myPageBuilder(const Loading(), Curves.easeInOut);
       default:
-        return MaterialPageRoute(
-            builder: (context) => MainScreen(child: Container()));
+        return MaterialPageRoute(builder: (context) => GricaScreen());
     }
   }
 

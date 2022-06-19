@@ -11,8 +11,8 @@ class Loading extends StatefulWidget {
 
 class _LoadingState extends State<Loading> {
   _navigationToHome() async {
-    await Future.delayed(const Duration(seconds: 6), () {});
-    Navigator.pushReplacementNamed(context, GeneratedRoutes.home);
+    await Future.delayed(const Duration(seconds: 10), () {});
+    Navigator.pushReplacementNamed(context, GeneratedRoutes.grica);
   }
 
   @override
