@@ -80,7 +80,7 @@ class RecapGrica extends StatelessWidget {
               ]);
             }),
             RecapItem(
-              title: "Nom de l'événement",
+              title: "type de la catastrophe",
               value: "${disaster.catastrophe["libelle"]}",
             ),
             const Divider(),
@@ -90,13 +90,18 @@ class RecapGrica extends StatelessWidget {
             ),
             const Divider(),
             RecapItem(
+              title: "profondeur de la catastrophe",
+              value: "${disaster.profondeur["libelle"]}",
+            ),
+            const Divider(),
+            RecapItem(
               title: "La frequence de la catastrophe ",
               value: "${disaster.frequence["libelle"]}",
             ),
             const Divider(),
             RecapItem(
-              title: "profondeur de la catastrophe",
-              value: "${disaster.profondeur["libelle"]}",
+              title: "La vitesse de la catastrophe ",
+              value: "${disaster.vitesse["libelle"]}",
             ),
             const Divider(),
             const SizedBox(

@@ -1,37 +1,37 @@
 List gricaFormData = [
   {
-    "label": "Nature de l'information",
-    "hint": "Nature de  'linformation",
-    "key": "niveauPerte",
-    'id': "idniveauperte"
-  },
-  {
-    "label": "Support de  parution",
-    "hint": "Support de Parution",
+    "label": " catastrophe ",
+    "hint": "Donnez le type de la catastrophe",
     "key": "catastrophe",
     'id': "idcatastrophe"
   },
   {
-    "label": "Perception du support de parution",
-    "hint": "Perception du support",
+    "label": "Niveau de perte ",
+    "hint": "Niveau de perte",
+    "key": "niveauPerte",
+    'id': "idniveauperte"
+  },
+  {
+    "label": " Profondeur ",
+    "hint": "Profondeur",
     "key": "profondeur",
     'id': "idprofondeur"
   },
   {
-    "label": "Rebond de  l'information",
-    "hint": "Rebond de l'info",
+    "label": "Niveau de controle ",
+    "hint": "Niveau de controle",
     "key": "niveauControle",
     'id': "idniveaucontrole"
   },
   {
-    "label": "Rebond de  l'information",
-    "hint": "Rebond de l'info",
+    "label": " Frequence ",
+    "hint": "Frequence",
     "key": "frequence",
     'id': "idfrequence"
   },
   {
-    "label": "Rebond de  l'information",
-    "hint": "Rebond de l'info",
+    "label": " Vitesse ",
+    "hint": "Vitesse",
     "key": "vitesse",
     'id': "idvitesse"
   },
